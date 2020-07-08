@@ -1,21 +1,20 @@
-import java.io.PrintStream;
-import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class InsertionSortvsMergeSort {
     public static void main(String[] args){
         Scanner keyboard = new Scanner(System.in);
-        String[] input = keyboard.nextLine().split(" ");
-        double[] nums = new double[input.length];
-        for(int i = 0; i < input.length; i++){
-            nums[i] = Double.parseDouble(input[i]);
+        int n = keyboard.nextInt();
+        double[] nums = new double[n];
+        for(int i = 0; i< n; i++){
+            nums[i] = Math.random() * 1000;
         }
         double[] nums1 = nums.clone();
-        mergeSort(nums,0, nums.length);
-        for(int i = 0; i< nums.length; i++){
-            System.out.printf("%f ", nums[i]);
-        }
-
+        System.out.println("Insertion sort started.");
+        insertionSort(nums);
+        System.out.println("Insertion sort ended.");
+        System.out.println("Merge sort started.");
+        mergeSort(nums1, 0, n);
+        System.out.println("Merge sort ended.");
     }
 
     public static void insertionSort(double[] arr){
