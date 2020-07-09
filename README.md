@@ -2,10 +2,4 @@
 Here I try to learn basic and sophisticated algorithms
 
 
-
-
-
-
-
-
-written mostly in Java, but sometimes with Python
+written mostly in Java, but sometimes in Python
